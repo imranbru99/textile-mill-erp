@@ -1,0 +1,30 @@
+{
+  "key": "spinning",
+  "name": "Spinning",
+  "dependencies": [
+    "inventory"
+  ],
+  "permissions": [
+    "spinning.cottonMixing.view",
+    "spinning.cottonMixing.create",
+    "spinning.cottonMixing.update",
+    "spinning.cottonMixing.delete",
+    "spinning.cottonMixing.approve",
+    "spinning.cottonMixingLine.view",
+    "spinning.cottonMixingLine.create",
+    "spinning.cottonMixingLine.update",
+    "spinning.cottonMixingLine.delete",
+    "spinning.cottonMixingLine.approve",
+    "spinning.spinningProduction.view",
+    "spinning.spinningProduction.create",
+    "spinning.spinningProduction.update",
+    "spinning.spinningProduction.delete",
+    "spinning.spinningProduction.approve",
+    "spinning.yarnLot.view",
+    "spinning.yarnLot.create",
+    "spinning.yarnLot.update",
+    "spinning.yarnLot.delete",
+    "spinning.yarnLot.approve"
+  ],
+  "menu": "Spinning"
+}

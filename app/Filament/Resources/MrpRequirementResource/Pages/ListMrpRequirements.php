@@ -1,0 +1,13 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Filament\Resources\MrpRequirementResource\Pages;
+
+use App\Filament\Resources\MrpRequirementResource;
+use Filament\Resources\Pages\ListRecords;
+
+class ListMrpRequirements extends ListRecords
+{
+    protected static string $resource = MrpRequirementResource::class;
+}

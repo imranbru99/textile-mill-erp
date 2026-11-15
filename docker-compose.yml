@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8000"
+    env_file: .env
+    depends_on:
+      - mysql
+      - redis
+    command: php artisan serve --host=0.0.0.0 --port=8000
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: mill
+      MYSQL_USER: mill
+      MYSQL_PASSWORD: mill
+      MYSQL_ROOT_PASSWORD: mill
+    ports:
+      - "3306:3306"
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"

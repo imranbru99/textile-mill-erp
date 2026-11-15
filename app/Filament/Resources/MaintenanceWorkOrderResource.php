@@ -1,0 +1,109 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Filament\Resources;
+
+use App\Filament\Resources\MaintenanceWorkOrderResource\Pages\CreateMaintenanceWorkOrder;
+use App\Filament\Resources\MaintenanceWorkOrderResource\Pages\EditMaintenanceWorkOrder;
+use App\Filament\Resources\MaintenanceWorkOrderResource\Pages\ListMaintenanceWorkOrders;
+use App\Modules\Maintenance\Models\MaintenanceWorkOrder;
+use App\Support\Modules\ModuleRegistry;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Table;
+
+class MaintenanceWorkOrderResource extends Resource
+{
+    protected static ?string $model = MaintenanceWorkOrder::class;
+
+    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedWrenchScrewdriver;
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Maintenance';
+
+    protected static ?string $moduleKey = 'maintenance';
+
+    protected static ?string $permission = 'maintenance.maintenanceWorkOrder';
+
+    public static function canAccess(): bool
+    {
+        $user = auth()->user();
+
+        return $user !== null
+            && ModuleRegistry::enabled(static::$moduleKey ?? 'maintenance')
+            && $user->permits((static::$permission ?? 'maintenance.maintenanceWorkOrder').'.view');
+    }
+
+    public static function shouldRegisterNavigation(): bool
+    {
+        return static::canAccess();
+    }
+
+    public static function form(Schema $schema): Schema
+    {
+        return $schema->components([
+            Select::make('branch_id')->label('Branch Id')->relationship('branch', 'name')->searchable()->preload(),
+            Select::make('machine_id')->label('Machine Id')->relationship('machine', 'name')->searchable()->preload(),
+            Select::make('breakdown_log_id')->label('Breakdown Log Id')->relationship('breakdownLog', 'id')->searchable()->preload(),
+            Select::make('kind')->label('Kind')->options(['vat' => 'vat', 'ait' => 'ait', 'tds' => 'tds', 'sd' => 'sd', 'raw_cotton' => 'raw cotton', 'yarn' => 'yarn', 'greige' => 'greige', 'finished' => 'finished', 'dye_chemical' => 'dye chemical', 'spare' => 'spare', 'scrap' => 'scrap', 'bonded' => 'bonded', 'preventive' => 'preventive', 'breakdown' => 'breakdown', 'received' => 'received', 'issued' => 'issued'])->native(false),
+            DateTimePicker::make('started_at')->label('Started At'),
+            DateTimePicker::make('finished_at')->label('Finished At'),
+            TextInput::make('downtime_minutes')->label('Downtime Minutes')->numeric(),
+            TextInput::make('number')->label('Number')->required()->maxLength(255),
+            Select::make('status')->label('Status')->options(['draft' => 'draft', 'submitted' => 'submitted', 'approved' => 'approved', 'rejected' => 'rejected', 'posted' => 'posted', 'cancelled' => 'cancelled', 'closed' => 'closed', 'released' => 'released', 'hold' => 'hold'])->native(false),
+            DatePicker::make('document_date')->label('Document Date'),
+            TextInput::make('currency_code')->label('Currency Code')->required()->maxLength(255),
+            TextInput::make('exchange_rate')->label('Exchange Rate')->numeric(),
+            Textarea::make('notes')->label('Notes')->columnSpanFull(),
+            TextInput::make('total_amount')->label('Total Amount')->numeric(),
+        ]);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+            TextColumn::make('branch_id')->label('Branch Id')->sortable()->toggleable(),
+            TextColumn::make('machine_id')->label('Machine Id')->sortable()->toggleable(),
+            TextColumn::make('breakdown_log_id')->label('Breakdown Log Id')->sortable()->toggleable(),
+            TextColumn::make('kind')->label('Kind')->searchable()->sortable()->toggleable(),
+            TextColumn::make('started_at')->label('Started At')->searchable()->sortable()->toggleable(),
+            TextColumn::make('finished_at')->label('Finished At')->searchable()->sortable()->toggleable(),
+            TextColumn::make('downtime_minutes')->label('Downtime Minutes')->searchable()->sortable()->toggleable(),
+            TextColumn::make('number')->label('Number')->searchable()->sortable()->toggleable(),
+            ])
+            ->filters([
+                SelectFilter::make('status')->options(['draft' => 'Draft', 'submitted' => 'Submitted', 'approved' => 'Approved', 'posted' => 'Posted', 'closed' => 'Closed']),
+            ])
+            ->recordActions([
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                ]),
+            ])
+            ->defaultSort('id', 'desc');
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListMaintenanceWorkOrders::route('/'),
+            'create' => CreateMaintenanceWorkOrder::route('/create'),
+            'edit' => EditMaintenanceWorkOrder::route('/{record}/edit'),
+        ];
+    }
+}

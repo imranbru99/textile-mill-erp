@@ -1,0 +1,30 @@
+{
+  "key": "planning",
+  "name": "Planning",
+  "dependencies": [
+    "inventory"
+  ],
+  "permissions": [
+    "planning.productionPlan.view",
+    "planning.productionPlan.create",
+    "planning.productionPlan.update",
+    "planning.productionPlan.delete",
+    "planning.productionPlan.approve",
+    "planning.bomLine.view",
+    "planning.bomLine.create",
+    "planning.bomLine.update",
+    "planning.bomLine.delete",
+    "planning.bomLine.approve",
+    "planning.mrpRequirement.view",
+    "planning.mrpRequirement.create",
+    "planning.mrpRequirement.update",
+    "planning.mrpRequirement.delete",
+    "planning.mrpRequirement.approve",
+    "planning.subcontractOrder.view",
+    "planning.subcontractOrder.create",
+    "planning.subcontractOrder.update",
+    "planning.subcontractOrder.delete",
+    "planning.subcontractOrder.approve"
+  ],
+  "menu": "Planning"
+}

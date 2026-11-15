@@ -1,0 +1,25 @@
+{
+  "key": "weaving",
+  "name": "Weaving",
+  "dependencies": [
+    "inventory"
+  ],
+  "permissions": [
+    "weaving.weaverBeam.view",
+    "weaving.weaverBeam.create",
+    "weaving.weaverBeam.update",
+    "weaving.weaverBeam.delete",
+    "weaving.weaverBeam.approve",
+    "weaving.weavingProduction.view",
+    "weaving.weavingProduction.create",
+    "weaving.weavingProduction.update",
+    "weaving.weavingProduction.delete",
+    "weaving.weavingProduction.approve",
+    "weaving.fabricRoll.view",
+    "weaving.fabricRoll.create",
+    "weaving.fabricRoll.update",
+    "weaving.fabricRoll.delete",
+    "weaving.fabricRoll.approve"
+  ],
+  "menu": "Weaving"
+}

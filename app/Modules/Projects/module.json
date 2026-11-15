@@ -1,0 +1,18 @@
+{
+  "key": "projects",
+  "name": "Projects",
+  "dependencies": [],
+  "permissions": [
+    "projects.capexRequest.view",
+    "projects.capexRequest.create",
+    "projects.capexRequest.update",
+    "projects.capexRequest.delete",
+    "projects.capexRequest.approve",
+    "projects.vaultDocument.view",
+    "projects.vaultDocument.create",
+    "projects.vaultDocument.update",
+    "projects.vaultDocument.delete",
+    "projects.vaultDocument.approve"
+  ],
+  "menu": "Projects"
+}

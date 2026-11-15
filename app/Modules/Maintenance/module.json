@@ -1,0 +1,28 @@
+{
+  "key": "maintenance",
+  "name": "Maintenance",
+  "dependencies": [],
+  "permissions": [
+    "maintenance.maintenancePlan.view",
+    "maintenance.maintenancePlan.create",
+    "maintenance.maintenancePlan.update",
+    "maintenance.maintenancePlan.delete",
+    "maintenance.maintenancePlan.approve",
+    "maintenance.maintenanceWorkOrder.view",
+    "maintenance.maintenanceWorkOrder.create",
+    "maintenance.maintenanceWorkOrder.update",
+    "maintenance.maintenanceWorkOrder.delete",
+    "maintenance.maintenanceWorkOrder.approve",
+    "maintenance.breakdownLog.view",
+    "maintenance.breakdownLog.create",
+    "maintenance.breakdownLog.update",
+    "maintenance.breakdownLog.delete",
+    "maintenance.breakdownLog.approve",
+    "maintenance.conditionReading.view",
+    "maintenance.conditionReading.create",
+    "maintenance.conditionReading.update",
+    "maintenance.conditionReading.delete",
+    "maintenance.conditionReading.approve"
+  ],
+  "menu": "Maintenance"
+}

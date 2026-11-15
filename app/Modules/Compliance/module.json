@@ -1,0 +1,16 @@
+{
+  "key": "bonded",
+  "name": "Compliance",
+  "dependencies": [
+    "inventory",
+    "finance"
+  ],
+  "permissions": [
+    "bonded.bondedRegister.view",
+    "bonded.bondedRegister.create",
+    "bonded.bondedRegister.update",
+    "bonded.bondedRegister.delete",
+    "bonded.bondedRegister.approve"
+  ],
+  "menu": "Compliance"
+}

@@ -1,0 +1,28 @@
+{
+  "key": "logistics",
+  "name": "Logistics",
+  "dependencies": [],
+  "permissions": [
+    "logistics.transporter.view",
+    "logistics.transporter.create",
+    "logistics.transporter.update",
+    "logistics.transporter.delete",
+    "logistics.transporter.approve",
+    "logistics.freightBill.view",
+    "logistics.freightBill.create",
+    "logistics.freightBill.update",
+    "logistics.freightBill.delete",
+    "logistics.freightBill.approve",
+    "logistics.shipment.view",
+    "logistics.shipment.create",
+    "logistics.shipment.update",
+    "logistics.shipment.delete",
+    "logistics.shipment.approve",
+    "logistics.shipmentLine.view",
+    "logistics.shipmentLine.create",
+    "logistics.shipmentLine.update",
+    "logistics.shipmentLine.delete",
+    "logistics.shipmentLine.approve"
+  ],
+  "menu": "Logistics"
+}

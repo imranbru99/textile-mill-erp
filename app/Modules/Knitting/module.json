@@ -1,0 +1,15 @@
+{
+  "key": "knitting",
+  "name": "Knitting",
+  "dependencies": [
+    "inventory"
+  ],
+  "permissions": [
+    "knitting.knittingProduction.view",
+    "knitting.knittingProduction.create",
+    "knitting.knittingProduction.update",
+    "knitting.knittingProduction.delete",
+    "knitting.knittingProduction.approve"
+  ],
+  "menu": "Knitting"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "utilities",
+  "name": "Utilities",
+  "dependencies": [],
+  "permissions": [
+    "utilities.utilityMeter.view",
+    "utilities.utilityMeter.create",
+    "utilities.utilityMeter.update",
+    "utilities.utilityMeter.delete",
+    "utilities.utilityMeter.approve",
+    "utilities.meterReading.view",
+    "utilities.meterReading.create",
+    "utilities.meterReading.update",
+    "utilities.meterReading.delete",
+    "utilities.meterReading.approve",
+    "utilities.fuelLog.view",
+    "utilities.fuelLog.create",
+    "utilities.fuelLog.update",
+    "utilities.fuelLog.delete",
+    "utilities.fuelLog.approve"
+  ],
+  "menu": "Utilities"
+}

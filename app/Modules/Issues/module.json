@@ -1,0 +1,33 @@
+{
+  "key": "issues",
+  "name": "Issues",
+  "dependencies": [],
+  "permissions": [
+    "issues.millIssue.view",
+    "issues.millIssue.create",
+    "issues.millIssue.update",
+    "issues.millIssue.delete",
+    "issues.millIssue.approve",
+    "issues.automationRule.view",
+    "issues.automationRule.create",
+    "issues.automationRule.update",
+    "issues.automationRule.delete",
+    "issues.automationRule.approve",
+    "issues.automationLog.view",
+    "issues.automationLog.create",
+    "issues.automationLog.update",
+    "issues.automationLog.delete",
+    "issues.automationLog.approve",
+    "issues.knowledgeArticle.view",
+    "issues.knowledgeArticle.create",
+    "issues.knowledgeArticle.update",
+    "issues.knowledgeArticle.delete",
+    "issues.knowledgeArticle.approve",
+    "issues.aiInvocation.view",
+    "issues.aiInvocation.create",
+    "issues.aiInvocation.update",
+    "issues.aiInvocation.delete",
+    "issues.aiInvocation.approve"
+  ],
+  "menu": "Issues & Automation"
+}

@@ -1,0 +1,25 @@
+{
+  "key": "costing",
+  "name": "Costing",
+  "dependencies": [
+    "finance"
+  ],
+  "permissions": [
+    "costing.costSheet.view",
+    "costing.costSheet.create",
+    "costing.costSheet.update",
+    "costing.costSheet.delete",
+    "costing.costSheet.approve",
+    "costing.costSheetLine.view",
+    "costing.costSheetLine.create",
+    "costing.costSheetLine.update",
+    "costing.costSheetLine.delete",
+    "costing.costSheetLine.approve",
+    "costing.cottonPosition.view",
+    "costing.cottonPosition.create",
+    "costing.cottonPosition.update",
+    "costing.cottonPosition.delete",
+    "costing.cottonPosition.approve"
+  ],
+  "menu": "Costing"
+}

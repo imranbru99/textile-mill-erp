@@ -1,0 +1,25 @@
+{
+  "key": "gate",
+  "name": "Gate",
+  "dependencies": [
+    "inventory"
+  ],
+  "permissions": [
+    "gate.gatePass.view",
+    "gate.gatePass.create",
+    "gate.gatePass.update",
+    "gate.gatePass.delete",
+    "gate.gatePass.approve",
+    "gate.visitorPass.view",
+    "gate.visitorPass.create",
+    "gate.visitorPass.update",
+    "gate.visitorPass.delete",
+    "gate.visitorPass.approve",
+    "gate.weighbridgeTicket.view",
+    "gate.weighbridgeTicket.create",
+    "gate.weighbridgeTicket.update",
+    "gate.weighbridgeTicket.delete",
+    "gate.weighbridgeTicket.approve"
+  ],
+  "menu": "Gate & Security"
+}

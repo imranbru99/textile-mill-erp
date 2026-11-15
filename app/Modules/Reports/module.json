@@ -1,0 +1,18 @@
+{
+  "key": "reports",
+  "name": "Reports",
+  "dependencies": [],
+  "permissions": [
+    "reports.dailySummary.view",
+    "reports.dailySummary.create",
+    "reports.dailySummary.update",
+    "reports.dailySummary.delete",
+    "reports.dailySummary.approve",
+    "reports.reportSchedule.view",
+    "reports.reportSchedule.create",
+    "reports.reportSchedule.update",
+    "reports.reportSchedule.delete",
+    "reports.reportSchedule.approve"
+  ],
+  "menu": "Reports"
+}
