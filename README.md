@@ -17,6 +17,19 @@ The demo company is **Padma Textile Mills**, Gazipur. The brand name is a settin
   <img src="docs/screenshots/sales-orders.png" width="48%" alt="Approved export sales order on the commercial desk">
   <img src="docs/screenshots/issue-board.png" width="48%" alt="Issue board: cotton on lab hold and ring-frame waste above standard">
 </p>
+<p align="center">
+  <img src="docs/screenshots/yarn-lots.png" width="32%" alt="Yarn lot YL-30-001, Ne 30, grade A, from the ring frame">
+  <img src="docs/screenshots/machines.png" width="32%" alt="Ring frame RF-12 on the machine register">
+  <img src="docs/screenshots/lab-dips.png" width="32%" alt="Buyer lab dip Navy 19-3920 on the wet-processing desk">
+</p>
+<p align="center">
+  <img src="docs/screenshots/items.png" width="32%" alt="Item catalog: yarn, dye, packing, and spare parts">
+  <img src="docs/screenshots/employees.png" width="32%" alt="Mill employees on the payroll desk">
+  <img src="docs/screenshots/contact.png" width="32%" alt="Public contact form that opens a mill inquiry">
+</p>
+<p align="center">
+  <img src="docs/screenshots/portal.png" width="48%" alt="Buyer and supplier desk sign-in">
+</p>
 
 ## What a mill gets back
 
